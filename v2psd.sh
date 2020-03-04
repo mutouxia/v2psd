@@ -56,7 +56,7 @@ installv2(){
 	curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/install-release.sh | sudo bash
 	echo ''	
 	echo ''
-	wget -N --no-check-certificate "https://raw.githubusercontent.com/TerrorbladeART/v2psd/master/config.json" -O /etc/v2ray/config.json
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/TerrorbladeART/brook-pf/master/config.json" -O /etc/v2ray/config.json
 	echo 'v2ray Poseidon 安装完毕, 即将开始配置相关文件..'
 	echo '...'
 	echo '.....'
@@ -429,9 +429,9 @@ echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
   -- 波塞冬的三叉戟 | 起飞~~~ --
   -- 基于BBR脚本修改 | 起飞~~ --
 
-  ————————————请先安装这个————————————
+————————————请先安装这个————————————
  ${Green_font_prefix}0.${Font_color_suffix} 安装V2P并升级内核更正时间(时间较长)
- ————————————请先安装这个————————————
+————————————请先安装这个————————————
 
 ————————————内核管理————————————
  ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR/BBR魔改版内核
