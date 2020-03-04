@@ -67,35 +67,40 @@ installv2(){
 Add_pf(){
 	read -p "请输入您的Nodeid(节点ID;如:2) :" nodeid
 	echo ''
-	sed -i "s/${nodeid}/yournodeid/g" /etc/v2ray/config.json
+	sed -i "s/yournodeid/${nodeid}/g" /etc/v2ray/config.json
+	echo ''
 	echo "节点ID:${nodeid}添加成功"
 	echo ''
 	read -p "请输入您webapi(如:https或http://xxx.com) :" yourwebapi
 	echo ''
-	sed -i "s/${yourwebapi}/yourwebapi/g" /etc/v2ray/config.json
+	sed -i "s/yourwebapi/${yourwebapi}/g" /etc/v2ray/config.json
+	echo ''
 	echo "WebAPI:${yourwebapi}添加成功"
 	echo ''
 	read -p "请输入您的网站token :" yourtoken
 	echo ''
-	sed -i "s/${yourtoken}/yourtoken/g" /etc/v2ray/config.json
+	sed -i "s/yourtoken/${yourtoken}/g" /etc/v2ray/config.json
+	echo ''
 	echo "网站token:${yourtoken}添加成功"
 	echo ''
 	read -p "用户同时在线IP数限制(0为不限制) :" yourmaxOnlineIPCount
 	echo ''
-	sed -i "s/${yourmaxOnlineIPCount}/yourmaxOnlineIPCount/g" /etc/v2ray/config.json
+	sed -i "s/yourmaxOnlineIPCount/${yourmaxOnlineIPCount}/g" /etc/v2ray/config.json
+	echo ''
 	echo "限制用户同时在线${yourtoken}IP添加成功"
 	echo ''
 	read -p "用户限速( 0 为不限速)/s :" yourmaxOnlineIPCount
 	echo ''
-	sed -i "s/${yourmaxOnlineIPCount}/yourmaxOnlineIPCount/g" /etc/v2ray/config.json
+	sed -i "s/yourmaxOnlineIPCount/${yourmaxOnlineIPCount}/g" /etc/v2ray/config.json
+	echo ''
 	echo "限制用户速度${yourmaxOnlineIPCount} /s"
 	echo ''
 	echo '配置填写完毕~~'
 	echo ''
 	echo 'v2ray开始重启...'
+	echo ''
 	service v2ray restart
 	echo "记得自己再检查一遍/etc/v2ray/config.json配置是否正确哦~~"
-	sleep 6s
 	echo ''
 	sleep 3s
 	start_menu
