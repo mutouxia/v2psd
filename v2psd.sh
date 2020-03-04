@@ -89,7 +89,7 @@ Add_pf(){
 	echo ''
 	echo "限制用户同时在线${yourtoken}IP添加成功"
 	echo ''
-	read -p "用户限速( 0 为不限速)/s :" yourmaxOnlineIPCount
+	read -p "用户限速( 0 为不限速)/s :" yourspeedLimit
 	echo ''
 	sed -i "s/yourspeedLimit/${yourspeedLimit}/g" /etc/v2ray/config.json
 	echo ''
