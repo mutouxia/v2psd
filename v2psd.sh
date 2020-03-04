@@ -56,7 +56,7 @@ installv2(){
 	curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/install-release.sh | sudo bash
 	echo ''	
 	echo ''
-	wget -N --no-check-certificate "https://raw.githubusercontent.com/TerrorbladeART/brook-pf/master/config.json" -O /etc/v2ray/config.json
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/TerrorbladeART/v2psd/master/config.json" -O /etc/v2ray/config.json
 	echo 'v2ray Poseidon 安装完毕, 即将开始配置相关文件..'
 	echo '...'
 	echo '.....'
