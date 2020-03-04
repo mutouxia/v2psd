@@ -91,9 +91,9 @@ Add_pf(){
 	echo ''
 	read -p "用户限速( 0 为不限速)/s :" yourmaxOnlineIPCount
 	echo ''
-	sed -i "s/yourmaxOnlineIPCount/${yourmaxOnlineIPCount}/g" /etc/v2ray/config.json
+	sed -i "s/yourspeedLimit/${yourspeedLimit}/g" /etc/v2ray/config.json
 	echo ''
-	echo "限制用户速度${yourmaxOnlineIPCount} /s"
+	echo "限制用户速度${yourspeedLimit} /s"
 	echo ''
 	echo '配置填写完毕~~'
 	echo ''
