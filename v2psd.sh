@@ -106,6 +106,26 @@ Add_pf(){
 	start_menu
 
 }
+Uptv2(){
+	curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/uninstall.sh | sudo bash
+	echo 'v2p卸载完毕..'
+	echo '开始安装v2p'
+	echo ''
+	curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/install-release.sh | sudo bash
+	echo 'v2p安装完毕'
+	echo ''
+	echo 'v2重启中'
+	service v2ray restart
+	echo ''
+	service v2ray status
+	echo '请检查v2p运行状态是否为 runing'
+	echo '请检查v2p运行状态是否为 runing'
+	echo '请检查v2p运行状态是否为 runing'
+	echo '请检查v2p运行状态是否为 runing'
+	sleep 5
+
+
+}
 #安装BBR内核
 installbbr(){
 	kernel_version="4.11.8"
@@ -447,6 +467,7 @@ echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
  ${Green_font_prefix}9.${Font_color_suffix} 卸载全部加速
  ${Green_font_prefix}10.${Font_color_suffix} 系统配置优化
  ${Green_font_prefix}11.${Font_color_suffix} 退出脚本
+ ${Green_font_prefix}12.${Font_color_suffix} 更新v2p
 ————————————————————————————————" && echo
 
 	check_status
@@ -494,6 +515,9 @@ case "$num" in
 	;;
 	11)
 	exit 1
+	;;
+	12)
+	Uptv2
 	;;
 	*)
 	clear
